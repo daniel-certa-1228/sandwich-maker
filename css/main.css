@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+
+body {
+	background-color: blanchedalmond;
+	font-family: 'Comfortaa', cursive;
+}
+
+.page-header {
+	text-align: center;
+
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
+.page-header h3 {
+	margin-top: 0;
+}
+
+.options {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.ingredients h3 {
+	text-decoration: underline;
+}
+
+.ingredients input {
+	margin-left: 2em;
+}
