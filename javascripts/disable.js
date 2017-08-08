@@ -1,9 +1,44 @@
 console.log( "disable.js" );
 
+
 {	
-	SandwichMaker.diableCheck = (array) => {
+	let sandwichOutput = document.getElementById("sandwichOutput")
+	let resetBtn = document.getElementById("resetBtn")
+	console.log( "resetBtn", resetBtn );
+	resetBtn.addEventListener("click", (event) => {
+		// console.log( "target", event.target );
+		SandwichMaker.unCheck(breadChecks);
+		SandwichMaker.unCheck(meatChecks);
+		SandwichMaker.unCheck(cheeseChecks);
+		SandwichMaker.unCheck(veggiesChecks);
+		SandwichMaker.unCheck(condimentsChecks);
+
+		let target = event.target
+		let allDivs = document.getElementsByClassName("ingredients");
+		for (let i = 0; i < allDivs.length; i++) {
+			allDivs[i].classList.remove('greyed-out')
+		};
+
+		meatRadio.checked = true;
+		breadRadio.checked = true;
+		cheeseRadio.checked = true;
+		veggiesRadio.checked = true;
+		condimentsRadio.checked = true;
+
+		SandwichMaker.hideSandwich(sandwichOutput);
+
+	});
+
+	SandwichMaker.unCheck = (array) => {
 		for (let i = 0; i < array.length; i++) {
 			array[i].checked = false;
+			array[i].disabled = false
+		};
+	}
+
+	SandwichMaker.diableCheck = (array) => {
+		for (let i = 0; i < array.length; i++) {
+			SandwichMaker.unCheck(array);
 			array[i].disabled = true;
 		};
 	};
