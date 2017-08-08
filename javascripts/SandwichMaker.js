@@ -3,19 +3,24 @@
 }
 
 {
-	let sandwichDiv = document.getElementById("sandwichOutput");
-	let sandwichBtn = document.getElementById("sandwichBtn")
-	// console.log( "sandwichOutput", sandwichOutput );
+	let ingredientChoices =[];
 
-	SandwichMaker.showSandwich = (element) => {
+	SandwichMaker.getValues = () => {
+		
+		ingredientChoices = []
 
-		element.classList.remove("hidden")
+		let choices = $("input:checkbox")
 
+		for (let i = 0; i < choices.length; i++) {
+
+			if (choices[i].checked) {
+
+				ingredientChoices.push(choices[i].value)
+
+			}
+
+		};
+			console.log( "ingredientChoices", ingredientChoices );
 	}
-
-	sandwichBtn.addEventListener("click", (event) => {
-		SandwichMaker.showSandwich(sandwichDiv)
-		sandwichDiv.scrollIntoView()
-	});
 
 }

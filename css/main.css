@@ -20,17 +20,22 @@ body {
 }
 
 
-
 .options {
 	text-align: center;
 	text-decoration: underline;
 }
+
+input[type=radio] {
+	margin-bottom: 1.2em;
+}
+
 .ingredients {
 	text-align: center;
 }
 
 .ingredients h3 {
 	text-decoration: underline;
+	margin-bottom: .5em;
 }
 
 .ingredients input {
@@ -58,11 +63,19 @@ body {
 #sandwichOutput {
 	background-color: whitesmoke;
 	padding: 1em;
-	margin-top: 1em;
+	/*margin-top: 1em;*/
+	border-radius: 20px;
+	width: 80%;
+	margin: 1em auto;
+	box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
 }
-
+/* GENERICS */
 .hidden {
 	display: none;
+}
+
+.greyed-out {
+	color: grey;
 }
 
 

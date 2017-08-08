@@ -15,44 +15,54 @@
 			<h2>Options:</h2>
 		</header>
 
-		<div class="ingredients">
+		<div class="ingredients" id="bread-div">
 			<h3>Bread:</h4>
-			<input type="checkbox" name="white" value="white">White - $1.00
-			<input type="checkbox" name="wheat" value="wheat">Wheat - $1.25
-			<input type="checkbox" name="rye" value="rye">Rye - $1.50
-			<input type="checkbox" name="noBread" value="noBread">No Bread
+			<input type="radio" name="bread" value=null checked id="BreadRadio">Bread
+			<input type="radio" name="bread" value="No_Bread" id="noBreadRadio">No Bread<br>
+			<input type="checkbox" name="White" value="White" class="bread-check">White - $1.00
+			<input type="checkbox" name="Wheat" value="Wheat" class="bread-check">Wheat - $1.25
+			<input type="checkbox" name="Rye" value="Rye" class="bread-check">Rye - $1.50
+			<!-- <input type="checkbox" name="No_Bread" value="No_Bread" class="no">No Bread -->
 		</div>
 
-		<div class="ingredients">
+		<div class="ingredients" id="meat-div">
 			<h3>Meat:</h4>
-			<input type="checkbox" name="beef" value="beef">Beef - $3.00
-			<input type="checkbox" name="chicken" value="chicken">Chicken - $2.50
-			<input type="checkbox" name="turkey" value="turkey">Turkey - $1.75
-			<input type="checkbox" name="noMeat" value="noMeat">No Meat
+			<input type="radio" name="beef" value=null checked id="MeatRadio">Meat
+			<input type="radio" name="beef" value="No_Meat" id="noMeatRadio">No Meat<br>
+			<input type="checkbox" name="Beef" value="Beef" class="meat-check">Beef - $3.00
+			<input type="checkbox" name="Chicken" value="Chicken" class="meat-check">Chicken - $2.50
+			<input type="checkbox" name="Turkey" value="Turkey" class="meat-check">Turkey - $1.75
+			<!-- <input type="checkbox" name="No_Meat" value="No_Meat" class="no">No Meat -->
 		</div>
 
-		<div class="ingredients">
+		<div class="ingredients" id="cheese-div">
 			<h3>Cheese:</h4>
-			<input type="checkbox" name="americanCheese" value="americanCheese">American - $1.00
-			<input type="checkbox" name="swissCheese" value="swissCheese">Swiss - $0.75
-			<input type="checkbox" name="provaloneCheese" value="provaloneCheese">Provalone - $1.10
-			<input type="checkbox" name="noCheese" value="noCheese">No Cheese
+			<input type="radio" name="cheese" value=null checked id="CheeseRadio">Cheese
+			<input type="radio" name="cheese" value="No_Cheese" id="noCheeseRadio">No Cheese<br>
+			<input type="checkbox" name="American_Cheese" value="American_Cheese" class="cheese-check">American - $1.00
+			<input type="checkbox" name="Swiss_Cheese" value="Swiss_Cheese" class="cheese-check">Swiss - $0.75
+			<input type="checkbox" name="Provalone_Cheese" value="Provalone_Cheese" class="cheese-check">Provalone - $1.10
+			<!-- <input type="checkbox" name="No_Cheese" value="No_Cheese" class="no">No Cheese -->
 		</div>
 
-		<div class="ingredients">
+		<div class="ingredients" id="veggie-div">
 			<h3>Veggies:</h4>
-			<input type="checkbox" name="lettuce" value="lettuce">Lettuce - $0.50
-			<input type="checkbox" name="mushrooms" value="mushrooms">Mushrooms - $0.75
-			<input type="checkbox" name="peppers" value="peppers">Peppers - $1.10
-			<input type="checkbox" name="noVeggies" value="noVeggies">No Veggies
+			<input type="radio" name="veggies" value=null checked id="VeggiesRadio">Veggies
+			<input type="radio" name="veggies" value="No_Veggies" id="noVeggiesRadio">No Veggies<br>
+			<input type="checkbox" name="Lettuce" value="Lettuce" class="veggies-check">Lettuce - $0.50
+			<input type="checkbox" name="Mushrooms" value="Mushrooms" class="veggies-check">Mushrooms - $0.75
+			<input type="checkbox" name="Peppers" value="Peppers" class="veggies-check">Peppers - $0.90
+			<!-- <input type="checkbox" name="No_Veggies" value="No_Veggies" class="no">No Veggies -->
 		</div>
 
-		<div class="ingredients">
-			<h3>Veggies:</h4>
-			<input type="checkbox" name="ketchup" value="ketchup">Ketchup - $0.25
-			<input type="checkbox" name="mustard" value="mustard">Mustard - $0.50
-			<input type="checkbox" name="mayo" value="mayo">Mayo - $0.65
-			<input type="checkbox" name="noCondiments" value="noCondiments">No Condiments
+		<div class="ingredients" id="condiment-div">
+			<h3>Condiments:</h4>
+			<input type="radio" name="cond" value=null checked id="CondimentsRadio">Condiments
+			<input type="radio" name="cond" value="No_Meat" id="noCondimentsRadio">No Condiments<br>
+			<input type="checkbox" name="Ketchup" value="Ketchup" class="condiments-check">Ketchup - $0.25
+			<input type="checkbox" name="Mustard" value="Mustard" class="condiments-check">Mustard - $0.50
+			<input type="checkbox" name="Mayo" value="Mayo" class="condiments-check">Mayo - $0.65
+			<!-- <input type="checkbox" name="No_Condiments" value="No_Condiments" class="no">No Condiments -->
 		</div>
 
 		<div id="btnDiv">
@@ -71,14 +81,13 @@
 		</div>
 
 
-<!-- 		<script
-		  src="http://code.jquery.com/jquery-3.2.1.js"
-		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		  crossorigin="anonymous">
-		  	
-		 </script> -->
+		<script
+		  src="http://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
 		<script type="text/javascript" src="javascripts/SandwichMaker.js"></script>
 		<script type="text/javascript" src="javascripts/DOM-handler.js"></script>
+		<script type="text/javascript" src="javascripts/disable.js"></script>
 		<script type="text/javascript" src="javascripts/meat.js"></script>
 		<script type="text/javascript" src="javascripts/cheese.js"></script>
 		<script type="text/javascript" src="javascripts/bread.js"></script>
