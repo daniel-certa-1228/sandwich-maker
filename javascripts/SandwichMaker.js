@@ -3,12 +3,13 @@
 }
 
 {
-
 	let totalPrice = 0;
 
 	SandwichMaker.getTotalPrice = () => {
 		return totalPrice;
 	}
+
+////////////////////////////////////////////////////////////////
 
 	let breadChoices = [];
 	let meatChoices = [];
@@ -16,7 +17,7 @@
 	let veggieChoices = [];
 	let condimentChoices = [];
 
-	SandwichMaker.unpackChoices = () => {
+	SandwichMaker.calculate = () => {
 
 		let breadValues = document.getElementsByClassName("br");
 		let meatValues = document.getElementsByClassName("mt");
@@ -41,23 +42,17 @@
 		SandwichMaker.getValues(cheeseValues, cheeseChoices)
 		SandwichMaker.getValues(veggieValues, veggieChoices)
 		SandwichMaker.getValues(condimentValues, condimentChoices)
+////////////////////////////////////////////////////////////////////////////////
+		let breadCost = SandwichMaker.getBreadTotal(breadChoices);
+		let meatCost = SandwichMaker.getMeatTotal(meatChoices);
+		let veggieCost = SandwichMaker.getVeggieTotal(veggieChoices);
+		let cheeseCost = SandwichMaker.getCheeseTotal(cheeseChoices);
+		let condimentCost = SandwichMaker.getCondimentTotal(condimentChoices);
 
-		console.log(  "bread", breadChoices, "meat", meatChoices, "cheese", cheeseChoices, "veggies", veggieChoices, "condiments", condimentChoices );
-
+		let subTotal = breadCost + meatCost + veggieCost + cheeseCost + condimentCost
+		// console.log( "sub", subTotal );
+		return subTotal
+			// console.log( "breadCost", breadCost, "meatCost", meatCost, "veggieCost", veggieCost, "cheeseCost", cheeseCost, "condimentCost", condimentCost );
 	}
 
-
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-	// let allDivs = document.getElementsByClassName("ingredients")
-	// // console.log( "allDivs", allDivs );
-
-	// for (let i = 0; i < allDivs.length; i++) {
-	// 	console.log( "allDivs[i]", allDivs[i] );
-	// 	for (let i = 0; i < allDivs.length; i++) {
-	// 		let choices = $("allDivs[i].input")
-	// 		console.log( "choices", choices );
-	// 	};
-	// };
