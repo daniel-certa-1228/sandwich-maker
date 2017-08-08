@@ -17,7 +17,7 @@ console.log( "DOM-handler.js" );
 	}
 
 	sandwichBtn.addEventListener("click", (event) => {
-		SandwichMaker.getValues();
+		SandwichMaker.unpackChoices();
 		SandwichMaker.showSandwich(sandwichDiv)
 		sandwichDiv.scrollIntoView()
 	});

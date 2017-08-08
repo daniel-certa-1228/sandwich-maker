@@ -4,7 +4,7 @@ console.log( "disable.js" );
 {	
 	let sandwichOutput = document.getElementById("sandwichOutput")
 	let resetBtn = document.getElementById("resetBtn")
-	console.log( "resetBtn", resetBtn );
+	// console.log( "resetBtn", resetBtn );
 	resetBtn.addEventListener("click", (event) => {
 		// console.log( "target", event.target );
 		SandwichMaker.unCheck(breadChecks);
