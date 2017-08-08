@@ -11,6 +11,11 @@ console.log( "DOM-handler.js" );
 
 	}
 
+	SandwichMaker.hideSandwich = (element) => {
+
+		element.classList.add('hidden')
+	}
+
 	sandwichBtn.addEventListener("click", (event) => {
 		SandwichMaker.getValues();
 		SandwichMaker.showSandwich(sandwichDiv)

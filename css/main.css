@@ -25,6 +25,21 @@ body {
 	text-decoration: underline;
 }
 
+.options h2 {
+	margin-bottom: .25em;
+}
+
+#resetBtn {
+	padding: .5em;
+	background-color: white;
+	font-weight: bold;
+}
+
+#resetBtn:hover {
+	background-color: firebrick;
+	color:white;
+}
+
 input[type=radio] {
 	margin-bottom: 1.2em;
 }
@@ -76,6 +91,10 @@ input[type=radio] {
 
 .greyed-out {
 	color: grey;
+}
+
+.centered {
+	text-align: center;
 }
 
 
