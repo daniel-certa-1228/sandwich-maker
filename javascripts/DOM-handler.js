@@ -22,7 +22,7 @@ console.log( "DOM-handler.js" );
 		let cheese = SandwichMaker.sendCheese();
 		let veggies = SandwichMaker.sendVeggies();
 		let condiments = SandwichMaker.sendCondiments();
-		console.log( "bread", bread );
+		// console.log( "bread", bread );
 
 		sandwichDiv.innerHTML = `	<h1>Final Sandwich:</h1>
 									<p>Bread - ${bread}</p>

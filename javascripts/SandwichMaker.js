@@ -52,7 +52,7 @@
 
 		let subTotal = breadCost + meatCost + veggieCost + cheeseCost + condimentCost
 		// console.log( "sub", subTotal );
-			console.log( "breadCost", breadCost, "meatCost", meatCost, "veggieCost", veggieCost, "cheeseCost", cheeseCost, "condimentCost", condimentCost );
+		// console.log( "breadCost", breadCost, "meatCost", meatCost, "veggieCost", veggieCost, "cheeseCost", cheeseCost, "condimentCost", condimentCost );
 		return subTotal
 		
 	}
