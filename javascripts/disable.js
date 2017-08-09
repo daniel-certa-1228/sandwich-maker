@@ -120,13 +120,13 @@ console.log( "disable.js" );
 
 	condimentsRadio.addEventListener("click", (event) => {
 		let parent = event.target.parentNode
-		SandwichMaker.enableCheck(veggiesChecks)
+		SandwichMaker.enableCheck(condimentsChecks)
 		parent.classList.remove("greyed-out")
 	});	
 	
 	nocondimentsRadio.addEventListener("click", (event) => {
 		let parent = event.target.parentNode
-		SandwichMaker.diableCheck(veggiesChecks)
+		SandwichMaker.diableCheck(condimentsChecks)
 		parent.classList.add("greyed-out")
 	});
 	 

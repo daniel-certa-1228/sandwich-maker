@@ -9,18 +9,23 @@ console.log( "meat.js" );
 						"No_Meat": 0
 					 }
 
-	let meatNumbers = []				 			
+	let meatNumbers = []			 			
 
 	SandwichMaker.getMeatTotal = (array) => {
-		
+		let meatName = [];
+
+		SandwichMaker.sendMeats = () => {
+			return meatName
+		}
+
 		meatNumbers = [];
 
 		for (let i = 0; i < array.length; i++) {
 
 			let meatCost = meatPrices[array[i]];
-			// console.log( breadCost  );
-
+			let meats = array[i].replace("_", " ");
 			meatNumbers.push(meatCost)
+			meatName.push(meats)
 
 		};
 
@@ -37,6 +42,5 @@ console.log( "meat.js" );
 
 			return 0
 		}
-
 	}
 }

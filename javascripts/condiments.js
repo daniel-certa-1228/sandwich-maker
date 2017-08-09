@@ -12,16 +12,20 @@ console.log( "condiments.js" );
 	let condimentNumbers = []				 			
 
 	SandwichMaker.getCondimentTotal = (array) => {
+		let condimentsName = [];
+
+		SandwichMaker.sendCondiments = () => {
+			return condimentsName
+		}
 		
 		condimentNumbers = [];
 
 		for (let i = 0; i < array.length; i++) {
 
 			let condimentCost = condimentPrices[array[i]];
-			// console.log( breadCost  );
-
-			condimentNumbers.push(condimentCost)
-
+			let condiments = array[i].replace("_", " ")
+			condimentNumbers.push(condimentCost);
+			condimentsName.push(condiments);
 		};
 
 			if (condimentNumbers.length > 0) {
@@ -37,9 +41,5 @@ console.log( "condiments.js" );
 
 			return 0
 		}
-
 	}
-
-
-
 }

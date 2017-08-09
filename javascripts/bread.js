@@ -8,19 +8,23 @@ console.log( "bread.js" );
 							"No_Bread": 0,
 			 			}
 
-	let breadNumbers = []				 			
+	let breadNumbers = []			 			
 
 	SandwichMaker.getBreadTotal = (array) => {
+		let breadName = [];
+
+		SandwichMaker.sendBreads = () => {
+			return breadName
+		}
 
 		breadNumbers = [];
 
 		for (let i = 0; i < array.length; i++) {
 
 			let breadCost = breadPrices[array[i]];
-			// console.log( breadCost  );
-
-			breadNumbers.push(breadCost)
-
+			let breads = array[i].replace("_", " ");
+			breadNumbers.push(breadCost);
+			breadName.push(breads);
 		};
 
 			if (breadNumbers.length > 0) {
@@ -36,7 +40,5 @@ console.log( "bread.js" );
 			
 			return 0
 		}
-
 	}
-
 }
