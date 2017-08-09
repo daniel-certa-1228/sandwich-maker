@@ -32,7 +32,7 @@ console.log( "disable.js" );
 	SandwichMaker.unCheck = (array) => {
 		for (let i = 0; i < array.length; i++) {
 			array[i].checked = false;
-			array[i].disabled = false
+			// array[i].disabled = false
 		};
 	}
 
