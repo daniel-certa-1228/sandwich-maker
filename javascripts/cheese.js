@@ -12,15 +12,20 @@ console.log( "cheese.js" );
 	let cheeseNumbers = []				 			
 
 	SandwichMaker.getCheeseTotal = (array) => {
+		let cheeseName = [];
+
+		SandwichMaker.sendCheese = () => {
+			return cheeseName
+		}
 
 		cheeseNumbers = [];
 
 		for (let i = 0; i < array.length; i++) {
 
 			let cheeseCost = cheesePrices[array[i]];
-			// console.log( breadCost  );
-
+			let cheeses = array[i].replace("_", " ")
 			cheeseNumbers.push(cheeseCost)
+			cheeseName.push(cheeses)
 
 		};
 

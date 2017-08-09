@@ -21,10 +21,10 @@
 
 		let breadValues = document.getElementsByClassName("br");
 		let meatValues = document.getElementsByClassName("mt");
-		let cheeseValues = document.getElementsByClassName("chz")
-		let veggieValues = document.getElementsByClassName("veg")
-		let condimentValues = document.getElementsByClassName("con")
-		// console.log( "breadvalues", breadvalues );
+		let cheeseValues = document.getElementsByClassName("chz");
+		let veggieValues = document.getElementsByClassName("veg");
+		let condimentValues = document.getElementsByClassName("con");
+		
 
 		SandwichMaker.getValues = (array1, array2) => {
 
@@ -42,6 +42,7 @@
 		SandwichMaker.getValues(cheeseValues, cheeseChoices)
 		SandwichMaker.getValues(veggieValues, veggieChoices)
 		SandwichMaker.getValues(condimentValues, condimentChoices)
+	
 ////////////////////////////////////////////////////////////////////////////////
 		let breadCost = SandwichMaker.getBreadTotal(breadChoices);
 		let meatCost = SandwichMaker.getMeatTotal(meatChoices);
@@ -51,8 +52,9 @@
 
 		let subTotal = breadCost + meatCost + veggieCost + cheeseCost + condimentCost
 		// console.log( "sub", subTotal );
+			console.log( "breadCost", breadCost, "meatCost", meatCost, "veggieCost", veggieCost, "cheeseCost", cheeseCost, "condimentCost", condimentCost );
 		return subTotal
-			// console.log( "breadCost", breadCost, "meatCost", meatCost, "veggieCost", veggieCost, "cheeseCost", cheeseCost, "condimentCost", condimentCost );
+		
 	}
 
 }

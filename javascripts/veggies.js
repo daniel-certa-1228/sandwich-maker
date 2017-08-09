@@ -1,7 +1,6 @@
 console.log( "veggies.js" );
 
 {
-
 	let veggiePrices = {
 						"Lettuce": 0.50,
 						"Mushrooms": 0.75,
@@ -12,16 +11,20 @@ console.log( "veggies.js" );
 	let veggieNumbers = []				 			
 
 	SandwichMaker.getVeggieTotal = (array) => {
+		let veggieName = []
+
+		SandwichMaker.sendVeggies = () => {
+			return veggieName
+		}
 
 		veggieNumbers = [];
 
 		for (let i = 0; i < array.length; i++) {
 
 			let veggieCost = veggiePrices[array[i]];
-			// console.log( breadCost  );
-
+			let veggies = array[i].replace("_", " ")
 			veggieNumbers.push(veggieCost)
-
+			veggieName.push(veggies)
 		};
 
 			if (veggieNumbers.length > 0) {
@@ -34,11 +37,8 @@ console.log( "veggies.js" );
 			return veggieTotal
 
 		}  else  {
-
-			return 0
 			
+			return 0	
 		}
-
 	}
-
 }
