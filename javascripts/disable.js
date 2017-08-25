@@ -23,9 +23,6 @@ function enableCheck(array) {
 	}
 }
 
-
-
-
 let sandwichOutput = document.getElementById("sandwichOutput");
 let resetBtn = document.getElementById("resetBtn");
 // console.log( "resetBtn", resetBtn );
@@ -36,6 +33,12 @@ resetBtn.addEventListener("click", (event) => {
 	unCheck(cheeseChecks);
 	unCheck(veggiesChecks);
 	unCheck(condimentsChecks);
+
+	enableCheck(breadChecks);
+	enableCheck(condimentsChecks);
+	enableCheck(meatChecks);
+	enableCheck(cheeseChecks);
+	enableCheck(veggiesChecks);
 
 	let target = event.target;
 	let allDivs = document.getElementsByClassName("ingredients");
