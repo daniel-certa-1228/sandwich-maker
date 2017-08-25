@@ -1,44 +1,40 @@
+"use strict";
 console.log( "veggies.js" );
 
-{
-	let veggiePrices = {
-						"Lettuce": 0.50,
-						"Mushrooms": 0.75,
-						"Peppers": 0.90,
-						"No_Veggies": 0
-					 }
+var veggieSpace = {};
 
-	let veggieNumbers = []				 			
+let veggiePrices = {
+					"Lettuce": 0.50,
+					"Mushrooms": 0.75,
+					"Peppers": 0.90,
+					"No_Veggies": 0
+				 };
 
-	SandwichMaker.getVeggieTotal = (array) => {
-		let veggieName = []
+let veggieNumbers = [];		
 
-		SandwichMaker.sendVeggies = () => {
-			return veggieName
-		}
+function getVeggieTotal(array) {
+	let veggieName = [];
 
-		veggieNumbers = [];
+	veggieSpace.sendVeggies = () =>{
+		return veggieName;
+	};
 
-		for (let i = 0; i < array.length; i++) {
+	veggieNumbers = [];
 
-			let veggieCost = veggiePrices[array[i]];
-			let veggies = array[i].replace("_", " ")
-			veggieNumbers.push(veggieCost)
-			veggieName.push(veggies)
-		};
-
-			if (veggieNumbers.length > 0) {
-
-				let veggieTotal = veggieNumbers.reduce( (prev, curr) => {
-				return prev + curr
-
-			})
-			array.length = 0	
-			return veggieTotal
-
-		}  else  {
-			
-			return 0	
-		}
+	for (let i = 0; i < array.length; i++) {
+		let veggieCost = veggiePrices[array[i]];
+		let veggies = array[i].replace("_", " ");
+		veggieNumbers.push(veggieCost);
+		veggieName.push(veggies);
+	}
+		if (veggieNumbers.length > 0) {
+			let veggieTotal = veggieNumbers.reduce( (prev, curr) => {
+			return prev + curr;
+		});
+		array.length = 0;	
+		return veggieTotal;
+	}  else  {
+		return 0;
 	}
 }
+module.exports = {veggieSpace, getVeggieTotal};
